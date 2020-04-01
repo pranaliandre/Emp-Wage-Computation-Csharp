@@ -29,7 +29,7 @@ namespace empWageComputationProgram
             
             Console.WriteLine("Welcome to Employee Wage Computation");
             int empMonthlyWage=emp.getWorkHoursOrDay();
-            Console.WriteLine("wage per day : " + empMonthlyWage);
+            Console.WriteLine("Total day and daily wage : " + empMonthlyWage);
         }
         //function to Calculate Wages till a condition of get function total working hours or days is reached for a month 
         public int getWorkHoursOrDay()
@@ -73,7 +73,7 @@ namespace empWageComputationProgram
                 totalWage = totalWage + wagePerDay;//calculate total wage 
                 day++;
             }
-            //print the day and daily wage
+            //print the day and daily wage using key and value
             foreach (KeyValuePair<int, int> wage in EmpDailyWageKeyValue)
             {
                 Console.WriteLine("Day:{0}  wage: {1}", wage.Key, wage.Value);
@@ -81,7 +81,7 @@ namespace empWageComputationProgram
             ////return employee wage for month 
             return totalWage;
         }
-        //method to stored daily wage in dictinary
+        //method to stored day and daily wage in dictinary
         public void dailyWageDict(int day, int wagePerDay)
         {
             EmpDailyWageKeyValue.Add(day, wagePerDay);
