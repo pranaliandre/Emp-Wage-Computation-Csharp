@@ -5,9 +5,9 @@ namespace empWageComputationProgram
     class Program
     {
         //constant
-        private int EMP_WAGE_PER_HOUR = 20;
-        private int EMP_FULL_DAY_HOUR = 8;
-        private int EMP_PART_TIME_HOUR = 4;
+        private static int EMP_WAGE_PER_HOUR = 20;
+        private static int EMP_FULL_DAY_HOUR = 8;
+        private static int EMP_PART_TIME_HOUR = 4;
         private static int NO_WAGE = 0;
         private static int EMP_FULL_TIME = 2;
         private static int EMP_PART_TIME = 1;
