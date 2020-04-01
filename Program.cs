@@ -5,9 +5,9 @@ namespace empWageComputationProgram
     class Program
     {
         //constant
-        private static int EMP_WAGE_PER_HOUR = 20;
-        private static int EMP_FULL_DAY_HOUR = 8;
-        private static int EMP_PART_TIME_HOUR = 4;
+        private int EMP_WAGE_PER_HOUR = 20;
+        private int EMP_FULL_DAY_HOUR = 8;
+        private int EMP_PART_TIME_HOUR = 4;
         private static int NO_WAGE = 0;
         private static int EMP_FULL_TIME = 2;
         private static int EMP_PART_TIME = 1;
@@ -22,16 +22,15 @@ namespace empWageComputationProgram
         private static int workHours=0;
         private static int totalWage;
         Random random = new Random();
-       
         static void Main(string[] args)
         {
             Program emp =new Program();
             Console.WriteLine("Welcome to Employee Wage Computation");
-            int empMonthlyWage=emp.empTotalWorkHoursDay();
+            int empMonthlyWage=emp.getWorkHoursOrDay();
             Console.WriteLine("wage per day : " + empMonthlyWage);
         }
-        //Method to Calculate Wages till a condition of total working hours or days is reached for a month 
-        public int empTotalWorkHoursDay()
+        //function to Calculate Wages till a condition of get function total working hours or days is reached for a month 
+        public int getWorkHoursOrDay()
         {
             while (totalEmpHrs < MONTHLY_MAX_WORKING_HOURS && totalWorkingDay < NUM_OF_WORKING)
             {
@@ -71,7 +70,6 @@ namespace empWageComputationProgram
             }
             ////return employee wage for month 
             return totalWage;
-           
         }
     }
 }
